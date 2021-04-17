@@ -1,5 +1,6 @@
 desc "Set environment variables to build and/or test with debug options"
 task :debug do
+  puts "[DEBUG] debug task"
   ENV["NOKOGIRI_DEBUG"] = "true"
   ENV["CFLAGS"] ||= ""
   ENV["CFLAGS"] += " -DDEBUG"

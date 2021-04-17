@@ -345,6 +345,7 @@ else
   end
 
   Rake::ExtensionTask.new("nokogiri", NOKOGIRI_SPEC) do |ext|
+    puts "[DEBUG] compiler task"
     ext.gem_spec.files.reject! { |f| f =~ %r{\.(java|jar)$} }
 
     ext.lib_dir = File.join(*['lib', 'nokogiri', ENV['FAT_DIR']].compact)
